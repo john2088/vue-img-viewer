@@ -347,6 +347,7 @@ export default {
       }
     },
     handleVisible (visible) {
+      this.currentPosition=this.startPosition;
       if (visible) {
         if (!this.isFirstShow) {
           this.handleFirstVisible()
@@ -355,6 +356,7 @@ export default {
       } else {
         this.restoreBody && this.restoreBody()
       }
+      //this.currentPosition=0;
     },
     handleFirstVisible () {
       // dom渲染后，将其插入body中
